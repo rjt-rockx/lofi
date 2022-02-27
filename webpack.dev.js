@@ -81,18 +81,11 @@ let rendererConfig = {
         },
       },
       {
-        test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
+        test: /\.(css)$/,
+        use: ['style-loader', 'css-loader?sourceMap'],
       },
       {
-        test: /\.(gif|jpg|png|svg|ico|icns)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
+        test: /\.(gif|jpg|png|svg|ico|icns|eot|ttf|woff|woff2)$/,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',
@@ -138,8 +131,8 @@ let visualizerConfig = {
         },
       },
       {
-        test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'],
+        test: /\.(css)$/,
+        use: ['style-loader', 'css-loader?sourceMap'],
       },
       {
         test: /\.node$/,
